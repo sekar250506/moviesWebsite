@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Color Tokens ─────────────────────────────────────────── */
+:root {
+  --bg-deep:      hsl(224, 28%, 6%);
+  --bg-card:      hsl(224, 22%, 10%);
+  --bg-card-hover:hsl(224, 22%, 13%);
+  --bg-header:    hsl(224, 30%, 8%);
+  --bg-glass:     hsla(224, 30%, 12%, 0.7);
+
+  --accent-primary:   hsl(261, 80%, 65%);
+  --accent-secondary: hsl(322, 75%, 60%);
+  --accent-gold:      hsl(43, 95%, 60%);
+  --accent-glow:      hsla(261, 80%, 65%, 0.25);
+
+  --text-primary:   hsl(220, 30%, 95%);
+  --text-secondary: hsl(220, 20%, 65%);
+  --text-muted:     hsl(220, 15%, 45%);
+
+  --border:         hsla(260, 30%, 40%, 0.2);
+  --border-hover:   hsla(261, 80%, 65%, 0.4);
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+
+  --shadow-card:  0 4px 24px hsla(220, 40%, 3%, 0.5);
+  --shadow-hover: 0 8px 40px hsla(261, 80%, 50%, 0.2), 0 2px 12px hsla(220, 40%, 3%, 0.4);
+  --shadow-glow:  0 0 24px hsla(261, 80%, 65%, 0.3);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
