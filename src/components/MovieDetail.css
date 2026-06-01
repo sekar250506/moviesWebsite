@@ -1,0 +1,178 @@
+.detail-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* ── Nav ── */
+.detail-nav {
+  padding: 1.25rem clamp(1rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  padding: 0.35rem 0;
+  transition: color 0.15s;
+}
+.back-btn:hover { color: var(--gold); }
+.back-arrow { font-size: 1rem; }
+
+/* ── Article ── */
+.detail-article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 3rem) 4rem;
+  animation: slideUp 0.35s ease both;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Header ── */
+.detail-header {
+  padding-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+.detail-header-rule {
+  height: 3px;
+  background: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.detail-header-rule--bottom {
+  height: 1px;
+  background: var(--border);
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+.detail-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.detail-original-title {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+.detail-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0.75rem 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gold);
+}
+.detail-score-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.detail-score-circle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+.detail-score-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.detail-score-max {
+  font-size: 1rem;
+  color: var(--muted);
+  font-family: 'Lato', sans-serif;
+}
+.detail-vote-count {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ── Overview ── */
+.detail-overview-section {
+  margin-bottom: 2.5rem;
+}
+.detail-overview {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink);
+  font-weight: 300;
+}
+
+/* ── Fields ── */
+.detail-fields {
+  border-top: 2px solid var(--ink);
+  padding-top: 1.5rem;
+}
+.detail-fields-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.fields-list {
+  display: flex;
+  flex-direction: column;
+}
+.field-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--cream);
+}
+.field-row:last-child { border-bottom: none; }
+.field-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.field-value {
+  font-size: 0.92rem;
+  color: var(--ink);
+  text-align: right;
+}
+
+/* ── States ── */
+.state-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem 2rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.state-center.error { color: var(--red); }
+.loader {
+  width: 28px; height: 28px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
